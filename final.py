@@ -1068,7 +1068,7 @@ def create_shareable_image(location_name, target_date, selected_activity, overal
         )
         
         # Convert to image with high quality
-        img_bytes = pio.to_image(share_fig, format="png", width=1200, height=900, scale=2)
+        img_bytes = pio.to_image(share_fig, format="png", width=1200, height=900, scale=2, engine="kaleido")
         return img_bytes
         
     except Exception as e:

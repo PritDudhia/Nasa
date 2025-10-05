@@ -14,6 +14,8 @@ import json
 import urllib.parse
 from scipy import stats as scipy_stats
 
+import plotly.io as pio
+pio.kaleido.scope.chromium_executable = pio.kaleido.scope._locate_chromium()
 
 def fetch_additional_data(lat, lon, start_date, end_date):
     """Fetch additional data from GES DISC OPeNDAP"""

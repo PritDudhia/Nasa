@@ -14,8 +14,6 @@ import json
 import urllib.parse
 from scipy import stats as scipy_stats
 
-import plotly.io as pio
-pio.kaleido.scope.chromium_executable = pio.kaleido.scope._locate_chromium()
 
 def fetch_additional_data(lat, lon, start_date, end_date):
     """Fetch additional data from GES DISC OPeNDAP"""
@@ -1070,7 +1068,7 @@ def create_shareable_image(location_name, target_date, selected_activity, overal
         )
         
         # Convert to image with high quality
-        img_bytes = pio.to_image(share_fig, format="png", width=1200, height=900, scale=2, engine="kaleido")
+        img_bytes = pio.to_image(share_fig, format="png", width=1200, height=900, scale=2)
         return img_bytes
         
     except Exception as e:

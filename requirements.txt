@@ -1,36 +1,24 @@
-# Core
 streamlit
 requests
 pandas
 numpy
-
-# Visualization
-plotly
+plotly>=5.0
 kaleido
 matplotlib
 seaborn
 altair
-
-# Images / Media
 pillow
 opencv-python
-
-# Scientific / Stats
 scipy
 statsmodels
-
-# Machine Learning / AI
 scikit-learn
 tensorflow
 torch
 torchvision
-
-# Web / API / Parsing
 beautifulsoup4
 lxml
 json5
 urllib3
-
-# Utilities
 tqdm
 python-dateutil
+

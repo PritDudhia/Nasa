@@ -13,7 +13,7 @@ import plotly.io as pio
 import json
 import urllib.parse
 from scipy import stats as scipy_stats
-
+import streamlit.components.v1 as components
 
 def fetch_additional_data(lat, lon, start_date, end_date):
     """Fetch additional data from GES DISC OPeNDAP"""
@@ -1643,29 +1643,22 @@ if st.session_state.analysis_complete:
             """, unsafe_allow_html=True)
         
         with col2:
-            # WhatsApp sharing button
-            st.markdown(f"""
-            <a href="{whatsapp_url}" target="_blank" style="
-                display: block;
-                background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-                border: 2px solid #25D366;
-                border-radius: 8px;
-                height: 60px;
-                width: 100%;
-                font-family: 'Orbitron', monospace;
-                font-size: 18px;
-                font-weight: 600;
-                color: #ffffff;
-                text-decoration: none;
-                text-align: center;
-                line-height: 60px;
-                box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
-                cursor: pointer;
-                margin: 0;
-            ">
-                📱 SHARE ON WHATSAPP
-            </a>
-            """, unsafe_allow_html=True)
+            components.html(f"""
+                <a href="{whatsapp_url}" target="_blank">
+                    <button style="
+                        background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+                        border: none;
+                        border-radius: 8px;
+                        height: 50px;
+                        width: 100%;
+                        color: white;
+                        font-size: 16px;
+                        cursor: pointer;
+                    ">
+                        📱 SHARE ON WHATSAPP
+                    </button>
+                </a>
+            """, height=60)
         
         # Additional sharing options
         st.markdown("### 🌐 Other Sharing Options")

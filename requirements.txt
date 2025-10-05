@@ -3,7 +3,7 @@ requests
 pandas
 numpy
 plotly>=5.0
-kaleido
+kaleido>=0.2.1
 matplotlib
 seaborn
 altair

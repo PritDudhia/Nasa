@@ -1067,10 +1067,11 @@ def create_shareable_image(location_name, target_date, selected_activity, overal
             yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)
         )
         
-        # Convert to image with high quality
-        img_bytes = pio.to_image(share_fig, format="png", width=1200, height=900, scale=2)
-        return img_bytes
-        
+        # # Convert to image with high quality
+        # img_bytes = pio.to_image(share_fig, format="png", width=1200, height=900, scale=2)
+        # return img_bytes
+        st.plotly_chart(share_fig)
+
     except Exception as e:
         st.error(f"Error creating shareable image: {str(e)}")
         return None

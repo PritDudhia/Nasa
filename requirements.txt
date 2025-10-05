@@ -1,8 +1,36 @@
+# Core
 streamlit
+requests
 pandas
 numpy
+
+# Visualization
 plotly
+kaleido
 matplotlib
-scipy
+seaborn
+altair
+
+# Images / Media
 pillow
-requests
+opencv-python
+
+# Scientific / Stats
+scipy
+statsmodels
+
+# Machine Learning / AI
+scikit-learn
+tensorflow
+torch
+torchvision
+
+# Web / API / Parsing
+beautifulsoup4
+lxml
+json5
+urllib3
+
+# Utilities
+tqdm
+python-dateutil
